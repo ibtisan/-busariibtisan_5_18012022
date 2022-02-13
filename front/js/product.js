@@ -13,7 +13,7 @@ fetch(`http://localhost:3000/api/products/${id}`)
     .then((res) => handleData(res))
     
 // Répartion des données de l'API dans le DOM 
-function handleData(kanap) {
+const handleData = (kanap) => {
     /*const altTxt = kanap.altTxt
     const colors = kanap.colors
     const description = kanap.description
@@ -44,14 +44,14 @@ function makeImage(imageUrl, altTxt) {
 }
 
 // Modification du titre "h1" 
-function makeTitle(name) {
+const makeTitle = (name) => {
     const h1 = document.querySelector("#title")
     if (h1 != null) h1.textContent = name
 
 }
 
 // Modification du prix  
-function makePrice(price) {
+const makePrice = (price) => {
     const span = document.querySelector("#price")
     if (span != null) span.textContent = price
 }
